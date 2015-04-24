@@ -54,13 +54,13 @@ angular.module('slick', []).directive('slick', [
       link: function (scope, element, attrs) {
         var destroySlick, initializeSlick, isInitialized;
         destroySlick = function () {
-          return $timeout(function () {
+          
             var slider;
             slider = $(element);
             slider.slick('unslick');
             slider.find('.slick-list').remove();
             return slider;
-          });
+          
         };
         initializeSlick = function () {
           return $timeout(function () {
